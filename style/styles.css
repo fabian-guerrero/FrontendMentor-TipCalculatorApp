@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    font-family: 'Space Mono', monospace;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+button{
+    appearance: none;
+    border: none;
+    cursor: pointer;
+}
+
+body{
+    background-color: hsl(185, 41%, 84%);
+    margin: 0;
+}
+
+.logo{
+    display: block;
+    margin: 50px auto 40px;
+}
+
+.calculator-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 32px;
+    border-radius: 20px 20px 0 0;
+}
+
+.label{
+    display: block;
+    margin-bottom: 10px;
+}
+
+.bill-form{
+    width: 100%;
+    margin-bottom: 45px;
+}
+
+
+.bill input{
+    background: url(../images/icon-dollar.svg) no-repeat 10px center;
+}
+
+.people{
+    position: relative;
+}
+
+.people input{
+    background: url(../images/icon-person.svg) no-repeat 10px center;
+}
+
+.people input::after{
+    content: "Can't be zerp";
+    display: block;
+}
+
+.people .people-error{
+    color: red;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
+}
+
+.bill input, .people input{
+    background-color: hsl(189, 41%, 97%);
+    padding-right: 10px;
+    width: 100%;
+    height: 45px;
+    text-align: right;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.bill input:focus-visible.valid, .people input:focus-visible.valid, input:focus-visible.custom-tip.valid{
+    outline:  green auto 1px;
+}
+
+.bill input.invalid, .people input.invalid, input.custom-tip.invalid{
+    outline:  red auto 1px;
+}
+
+.select-tip-wrapper{
+    margin: 45px 0;    
+}
+
+.tips-wrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.tips-wrapper > * {
+    width: 48%;
+    height: 45px;
+    text-align:center;
+    padding: 0;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+.tips-wrapper > *:nth-child(n+5){
+    margin-bottom: 0;
+}
+
+.tip-selector{
+    border-radius: 5px;
+    background-color: hsl(183, 100%, 15%);
+    color: hsl(0, 0%, 100%);
+    transition: background-color .1s linear, color .1s linear;
+    font-size: 20px;
+}
+
+.custom-tip{
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.tip-selector:hover{
+    background-color: hsl(185, 41%, 84%);
+    color: hsl(183, 100%, 15%);
+}
+
+.tip-selector:focus, .tip-selector.selected{
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+.results{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    box-sizing: border-box;
+    padding: 40px;
+    width: 100%;
+    border-radius: 20px;
+    background-color: hsl(183, 100%, 15%);
+}
+
+.tip-and-total-wrapper{
+    margin-bottom: 25px;
+}
+
+.tip-amount, .total{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tip-amount{
+    margin-bottom: 25px;
+}
+
+.description{
+    line-height: 20px;
+    color: hsl(0, 0%, 100%);
+}
+
+.description span{
+    font-size: 12px;
+    color: hsl(184, 14%, 56%)
+}
+
+.tip-value{
+    font-size: 34px;
+    color: hsl(172, 67%, 45%)
+}
+
+.reset{
+    width: 100%;
+    height: 45px;
+    font-size: 18px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    background-color: hsl(172, 67%, 45%);
+}
+
+.reset:disabled{
+    opacity: 0.3;
+    cursor: unset;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    position: relative;
+    bottom: 0;
+    margin: 30px 0;
+    width: 100%;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (min-width: 1024px) {
+    .tip-calculator{
+        /* margin-top: 160px;     */
+        margin-top: 9%;
+    }
+    
+    .logo{
+        margin: 0 auto 87px;
+    }
+
+    .calculator-wrapper{
+        flex-direction: row;
+        width: 80%;
+        max-width: 922px;
+        border-radius: 20px;
+    }
+
+    .tips-wrapper > *:nth-child(n+4){
+        margin-bottom: 0;
+    }
+
+    .tip-amount{
+        margin-bottom: 50px;
+    }    
+
+    .bill-form {
+        width: 45%;
+        margin-bottom: 0;
+    }
+
+    .results{
+        width: 50%;
+    }
+
+    .tips-wrapper > * {
+        width: 30%;
+    }
+
+    .tip-and-total-wrapper{
+        margin-bottom: 0;
+    }
+
+    .attribution { 
+        position: absolute;
+    }
+}
