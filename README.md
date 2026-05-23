@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/fabian-guerrero/TipCalculatorApp](https://github.com/fabian-guerrero/TipCalculatorApp)
-- Live Site URL: [https://fabian-guerrero.github.io/TipCalculatorApp/](https://fabian-guerrero.github.io/TipCalculatorApp/)
+- Live Site URL: [https://fabian-guerrero.github.io/TipCalculatorApp/](https://fabian-guerrero.github.io/FrontendMentor-TipCalculatorApp/)
 
 ## My process
 
